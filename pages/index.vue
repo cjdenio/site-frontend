@@ -1,23 +1,28 @@
 <template>
   <div class="container">
-    <NavBar />
     <div
       :style="{
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         height: '100vh',
       }"
     >
       <Avatar />
+      <h1 :style="{ fontSize: '50px' }">
+        <span class="green">Caleb</span> Denio
+      </h1>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 
-export default Vue.extend({})
+export default Vue.extend({
+  layout: 'nopadding',
+});
 </script>
 
 <style>

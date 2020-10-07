@@ -1,14 +1,19 @@
 <template>
-  <button :class="{ active: active, navButton: true }"><slot></slot></button>
+  <nuxt-link class="navButton" :to="to">
+    <icon :icon="icon" :style="{ marginRight: '10px' }" />
+    <slot></slot>
+  </nuxt-link>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 export default Vue.extend({
   props: {
     active: Boolean,
+    to: String,
+    icon: String,
   },
-})
+});
 </script>
 
 <style scoped>
@@ -21,17 +26,28 @@ export default Vue.extend({
   font-size: 20px;
   padding: 8px 20px;
   min-width: 150px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+
+  transition-duration: 100ms;
+  transition-property: transform, background-color, box-shadow, color;
 }
 
-.navButton.active {
+.navButton.nuxt-link-exact-active {
   background-color: var(--green);
-  border-radius: 12px;
   color: #006449;
 
   box-shadow: 0px 4px 30px black;
 }
 
-.navButton:active {
-  transform: none;
+.navButton.nuxt-link-exact-active:hover {
+  transform: translateY(-2px);
+}
+
+.navButton:not(.nuxt-link-exact-active):hover {
+  background-color: #444444;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 30px black;
 }
 </style>

@@ -1,16 +1,16 @@
 <template>
   <div class="navbar">
-    <NavButton>Skills</NavButton>
-    <NavButton>Projects</NavButton>
-    <NavButton active>Home</NavButton>
-    <NavButton>Blog</NavButton>
-    <NavButton>Contact</NavButton>
+    <NavButton to="/skills" icon="briefcase">Skills</NavButton>
+    <NavButton to="/projects" icon="laptop-code">Projects</NavButton>
+    <NavButton to="/" icon="home">Home</NavButton>
+    <NavButton to="/blog" icon="pen-alt">Blog</NavButton>
+    <NavButton to="/contact" icon="paper-plane">Contact</NavButton>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({})
+import Vue from 'vue';
+export default Vue.extend({});
 </script>
 
 <style scoped>
@@ -24,5 +24,6 @@ export default Vue.extend({})
   width: 75%;
   display: flex;
   justify-content: space-between;
+  max-width: 1000px;
 }
 </style>

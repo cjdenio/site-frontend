@@ -1,8 +1,21 @@
 <template>
-  <div>
+  <div :style="{ paddingTop: padding ? '150px' : '0' }">
+    <NavBar />
     <Nuxt />
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
+  props: {
+    padding: {
+      type: Boolean,
+      default: true,
+    },
+  },
+});
+</script>
 
 <style>
 html {
@@ -26,6 +39,7 @@ body {
 
 body {
   background-color: #262626;
+  text-align: center;
 }
 
 *,
@@ -33,5 +47,9 @@ body {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.green {
+  color: var(--green);
 }
 </style>
