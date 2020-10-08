@@ -6,6 +6,8 @@
       :name="project.name"
       :description="project.description"
       :url="project.githubUrl"
+      :language="project.language.name"
+      :languageColor="project.language.color"
     />
   </div>
 </template>
@@ -30,6 +32,10 @@ export default Vue.extend({
           }
           id
           githubUrl
+          language {
+            name
+            color
+          }
         }
       }
       `,

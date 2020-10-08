@@ -8,7 +8,7 @@ button {
   font-family: 'Poppins', sans-serif;
   border: none;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px;
   padding: 8px 20px;
   min-width: 150px;
   text-align: center;
@@ -21,7 +21,9 @@ button {
   background-color: var(--green);
   color: #006449;
 
-  box-shadow: 0px 4px 30px black;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
 }
 
 button:hover {
