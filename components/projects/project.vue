@@ -7,6 +7,9 @@
     </div>
     <div class="description" v-html="renderedDescription" />
     <div class="footer">
+      <div class="tags">
+        {{ joinedTags }}
+      </div>
       <a :href="url" target="_blank"
         ><Button
           ><icon
@@ -30,10 +33,14 @@ export default Vue.extend({
     url: String,
     language: String,
     languageColor: String,
+    tags: Array,
   },
   computed: {
     renderedDescription() {
       return this.description != null ? marked(this.description) : '';
+    },
+    joinedTags() {
+      return this.tags.map((i) => '#' + i).join(', ');
     },
   },
 });
@@ -60,7 +67,8 @@ export default Vue.extend({
 .name {
   font-size: 40px;
   font-weight: bold;
-  color: #a0a0a0;
+  /* color: #a0a0a0; */
+  color: var(--green);
 }
 
 .description {
@@ -70,13 +78,21 @@ export default Vue.extend({
 
 .footer {
   margin-top: 20px;
+  display: flex;
+}
+
+.tags {
+  flex: 1;
+  text-align: left;
+  color: #a0a0a0;
 }
 
 .green-accent {
   content: '';
   flex: 1;
   height: 5px;
-  background-color: var(--green);
+  /* background-color: var(--green); */
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 20px;
   margin: 0 20px;
 }

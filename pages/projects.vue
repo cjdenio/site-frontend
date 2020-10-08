@@ -8,6 +8,7 @@
       :url="project.githubUrl"
       :language="project.language.name"
       :languageColor="project.language.color"
+      :tags="project.tags.map((i) => i.name)"
     />
   </div>
 </template>
@@ -30,11 +31,13 @@ export default Vue.extend({
           logo {
             url
           }
-          id
           githubUrl
           language {
             name
             color
+          }
+          tags {
+            name
           }
         }
       }

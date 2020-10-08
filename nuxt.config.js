@@ -19,6 +19,11 @@ export default {
         name: 'og:description',
         content: 'Software developer, graphic designer, and lasagna enthusiast',
       },
+      {
+        hid: 'color-scheme',
+        name: 'color-scheme',
+        content: 'dark',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
