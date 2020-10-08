@@ -13,6 +13,9 @@
       <h1 :style="{ fontSize: '50px' }">
         <span class="green">Caleb</span> Denio
       </h1>
+      <h3 :style="{ fontWeight: 'normal' }">
+        Software Developer · Graphic Designer
+      </h3>
     </div>
   </div>
 </template>
