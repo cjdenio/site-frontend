@@ -48,5 +48,15 @@ export default Vue.extend({
     this.projects = resp.data.data.projects;
     console.log(resp);
   },
+  head: {
+    title: 'Projects | Caleb Denio',
+    meta: [
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: 'Projects | Caleb Denio',
+      },
+    ],
+  },
 });
 </script>
