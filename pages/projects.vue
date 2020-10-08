@@ -60,7 +60,7 @@ export default Vue.extend({
         hid: 'og:image',
         name: 'og:image',
         content: 'https://og.calebdenio.me/Projects.png?theme=major',
-      }
+      },
     ],
   },
 });
