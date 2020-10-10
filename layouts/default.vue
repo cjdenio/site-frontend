@@ -4,7 +4,6 @@
 
     <div
       :style="{
-        paddingTop: padding ? '150px' : '0',
         width: '75%',
         maxWidth: '1000px',
         margin: '0 auto',
@@ -61,5 +60,9 @@ body {
 
 .green {
   color: var(--green);
+}
+
+.content {
+  padding-top: 150px;
 }
 </style>

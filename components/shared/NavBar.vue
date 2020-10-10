@@ -107,6 +107,7 @@ export default Vue.extend({
 
   .navbar {
     flex-direction: column !important;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
