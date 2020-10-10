@@ -10,14 +10,12 @@
       <div class="tags">
         {{ joinedTags }}
       </div>
-      <a :href="url" target="_blank"
-        ><Button
-          ><icon
-            :icon="['fab', 'github']"
-            :style="{ marginRight: '10px' }"
-          />View on GitHub</Button
-        ></a
-      >
+      <a :href="url" target="_blank">
+        <Button>
+          <icon :icon="['fab', 'github']" :style="{ marginRight: '10px' }" />
+          View on GitHub
+        </Button>
+      </a>
     </div>
   </div>
 </template>
@@ -48,7 +46,6 @@ export default Vue.extend({
 
 <style scoped>
 .project {
-  width: 50%;
   background-color: #424242;
   padding: 10px 30px 20px 30px;
   margin: 40px auto;

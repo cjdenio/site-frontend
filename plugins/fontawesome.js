@@ -6,6 +6,8 @@ import {
   faLaptopCode,
   faPenAlt,
   faPaperPlane,
+  faBars,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -16,7 +18,9 @@ library.add(
   faLaptopCode,
   faPenAlt,
   faPaperPlane,
-  faGithub
+  faGithub,
+  faBars,
+  faTimes
 );
 
 Vue.component('icon', FontAwesomeIcon);

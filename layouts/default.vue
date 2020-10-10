@@ -1,7 +1,17 @@
 <template>
-  <div :style="{ paddingTop: padding ? '150px' : '0' }">
+  <div>
     <NavBar />
-    <Nuxt />
+
+    <div
+      :style="{
+        paddingTop: padding ? '150px' : '0',
+        width: '75%',
+        maxWidth: '1000px',
+        margin: '0 auto',
+      }"
+    >
+      <Nuxt />
+    </div>
   </div>
 </template>
 
