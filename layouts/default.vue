@@ -11,6 +11,8 @@
     >
       <Nuxt />
     </div>
+
+    <Footer />
   </div>
 </template>
 
