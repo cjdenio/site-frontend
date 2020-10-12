@@ -16,6 +16,7 @@
       <h3 :style="{ fontWeight: 'normal' }">
         Software Developer · Graphic Designer
       </h3>
+      <HackClubWebring />
     </div>
   </div>
 </template>
