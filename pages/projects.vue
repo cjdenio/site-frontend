@@ -74,7 +74,7 @@ export default Vue.extend({
 <style scoped>
 .projects {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
   gap: 25px;
   grid-gap: 24px;
 }

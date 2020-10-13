@@ -59,9 +59,20 @@ export default Vue.extend({
   box-sizing: border-box;
 }
 .image {
-  height: 300px;
-  background-color: white;
+  height: 250px;
+  background-color: #151515;
   border-radius: 10px 10px 0 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.image::after {
+  content: 'C';
+  color: #252525;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
 }
 .projectContent {
   background-color: #424242;
@@ -94,7 +105,7 @@ export default Vue.extend({
 }
 
 .footer {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
 }

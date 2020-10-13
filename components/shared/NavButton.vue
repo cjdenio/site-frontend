@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="navButton" :to="to">
+  <nuxt-link class="navButton" :to="to" @click.native="$emit('click')">
     <icon :icon="icon" :style="{ marginRight: '10px' }" />
     <slot></slot>
   </nuxt-link>
