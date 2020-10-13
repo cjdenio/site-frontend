@@ -1,21 +1,29 @@
 <template>
   <div class="project">
-    <div class="header">
-      <div class="name">{{ name }}</div>
-      <div class="green-accent"></div>
-      <badge :color="languageColor" :text="language" />
-    </div>
-    <div class="description" v-html="renderedDescription" />
-    <div class="footer">
-      <div class="tags">
-        {{ joinedTags }}
+    <div class="image"></div>
+    <div class="projectContent">
+      <div class="header">
+        <div class="name">{{ name }}</div>
+        <div class="green-accent"></div>
+        <badge :color="languageColor" :text="language" />
       </div>
-      <a :href="url" target="_blank">
-        <Button>
-          <icon :icon="['fab', 'github']" :style="{ marginRight: '10px' }" />
-          View on GitHub
-        </Button>
-      </a>
+      <div class="description" v-html="renderedDescription" />
+      <div class="footer">
+        <div class="tags">
+          {{ joinedTags }}
+        </div>
+        <a :href="url" target="_blank">
+          <Button :style="{ minWidth: 'unset' }" title="View on GitHub">
+            <icon
+              :icon="['fab', 'github']"
+              :style="{
+                /*marginRight: '10px'*/
+              }"
+            />
+            <!-- View on GitHub -->
+          </Button>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -46,14 +54,25 @@ export default Vue.extend({
 
 <style scoped>
 .project {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.image {
+  height: 300px;
+  background-color: white;
+  border-radius: 10px 10px 0 0;
+}
+.projectContent {
   background-color: #424242;
   padding: 10px 30px 20px 30px;
-  margin: 40px auto;
 
   display: flex;
   flex-direction: column;
 
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
+
+  flex: 1;
 }
 
 .header {
@@ -62,26 +81,32 @@ export default Vue.extend({
 }
 
 .name {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: bold;
   /* color: #a0a0a0; */
   color: var(--green);
 }
 
 .description {
-  font-size: 20px;
+  font-size: 18px;
   padding: 10px 0;
+  flex: 1;
 }
 
 .footer {
   margin-top: 20px;
   display: flex;
+  align-items: center;
 }
 
 .tags {
   flex: 1;
   text-align: left;
   color: #a0a0a0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-right: 10px;
 }
 
 .green-accent {

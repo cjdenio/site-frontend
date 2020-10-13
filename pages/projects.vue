@@ -1,15 +1,17 @@
 <template>
   <div class="content">
-    <project
-      v-for="project in projects"
-      :key="project.id"
-      :name="project.name"
-      :description="project.description"
-      :url="project.githubUrl"
-      :language="project.language.name"
-      :languageColor="project.language.color"
-      :tags="project.tags.map((i) => i.name)"
-    />
+    <div class="projects">
+      <project
+        v-for="project in projects"
+        :key="project.id"
+        :name="project.name"
+        :description="project.description"
+        :url="project.githubUrl"
+        :language="project.language.name"
+        :languageColor="project.language.color"
+        :tags="project.tags.map((i) => i.name)"
+      />
+    </div>
   </div>
 </template>
 
@@ -25,7 +27,7 @@ export default Vue.extend({
     let resp = await axios.post(process.env.BACKEND_URL + '/graphql', {
       query: `
       {
-        projects {
+        projects(sort: "name") {
           name
           description
           logo {
@@ -68,3 +70,12 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  grid-gap: 24px;
+}
+</style>
