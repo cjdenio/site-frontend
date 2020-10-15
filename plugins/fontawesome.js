@@ -9,7 +9,12 @@ import {
   faBars,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faCodepen, faDev } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGithub,
+  faCodepen,
+  faDev,
+  faSpotify,
+} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(
@@ -22,7 +27,8 @@ library.add(
   faCodepen,
   faDev,
   faBars,
-  faTimes
+  faTimes,
+  faSpotify
 );
 
 Vue.component('icon', FontAwesomeIcon);

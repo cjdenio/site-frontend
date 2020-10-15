@@ -1,6 +1,7 @@
 <template>
   <div class="footer">
-    <CalebDenio fontSize="30px" />
+    <CalebDenio fontSize="30px" style="flex-shrink: 0" />
+    <Spotify />
     <div class="buttons">
       <a href="https://github.com/cjdenio" target="_blank">
         <icon :icon="['fab', 'github']" class="icon" fixed-width />
@@ -27,8 +28,14 @@
   padding: 20px 0;
 }
 
+.footer > * {
+  padding: 10px;
+}
+
 .buttons {
   display: flex;
+  align-items: center;
+  justify-content: right;
 }
 .buttons .icon {
   font-size: 25px;
@@ -37,5 +44,17 @@
 }
 .buttons .icon:hover {
   color: var(--green);
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+  }
+  .footer > * {
+    padding: 0;
+  }
+  .buttons {
+    margin-top: 10px;
+  }
 }
 </style>

@@ -67,4 +67,11 @@ body {
 .content {
   padding-top: 150px;
 }
+
+a {
+  color: white;
+}
+a:hover {
+  color: var(--green);
+}
 </style>
