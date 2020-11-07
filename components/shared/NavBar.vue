@@ -22,8 +22,8 @@
       >
         <icon icon="times" size="2x" fixed-width />
       </Button>
-      <NavButton @click="closeMenu()" to="/skills" icon="briefcase"
-        >Skills</NavButton
+      <NavButton @click="closeMenu()" to="/tech" icon="briefcase"
+        >Tech</NavButton
       >
       <NavButton @click="closeMenu()" to="/projects" icon="laptop-code"
         >Projects</NavButton
