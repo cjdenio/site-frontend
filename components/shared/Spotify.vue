@@ -40,8 +40,9 @@ export default Vue.extend({
     loading: true,
   }),
   async created() {
-    let resp = await axios.post(process.env.BACKEND_URL + '/graphql', {
-      query: `
+    try {
+      let resp = await axios.post(process.env.BACKEND_URL + '/graphql', {
+        query: `
       {
         spotify {
           currentSong {
@@ -54,15 +55,19 @@ export default Vue.extend({
         }
       }
       `,
-    });
+      });
 
-    this.loading = false;
+      this.loading = false;
 
-    if (resp.data.data.spotify.currentSong) {
-      this.song = resp.data.data.spotify.currentSong.name;
-      this.url = resp.data.data.spotify.currentSong.url;
-      this.artist = resp.data.data.spotify.currentSong.artists[0].name;
-    } else {
+      if (resp.data.data.spotify.currentSong) {
+        this.song = resp.data.data.spotify.currentSong.name;
+        this.url = resp.data.data.spotify.currentSong.url;
+        this.artist = resp.data.data.spotify.currentSong.artists[0].name;
+      } else {
+        this.song = '';
+      }
+    } catch (e) {
+      this.loading = false;
       this.song = '';
     }
   },
