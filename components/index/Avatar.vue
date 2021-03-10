@@ -4,6 +4,9 @@
       src="~assets/img/caleb.jpg"
       class="avatar"
       :style="{ transform: `rotateX(${rotationX}) rotateY(${rotationY})` }"
+      alt="Caleb Denio"
+      width="250"
+      height="250"
     />
   </div>
 </template>

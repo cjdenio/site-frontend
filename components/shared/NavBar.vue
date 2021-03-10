@@ -22,17 +22,21 @@
       >
         <icon icon="times" size="2x" fixed-width />
       </Button>
-      <NavButton @click="closeMenu()" to="/tech" icon="briefcase"
-        >Tech</NavButton
-      >
-      <NavButton @click="closeMenu()" to="/projects" icon="laptop-code"
-        >Projects</NavButton
-      >
-      <NavButton @click="closeMenu()" to="/" icon="home">Home</NavButton>
-      <NavButton @click="closeMenu()" to="/blog" icon="pen-alt">Blog</NavButton>
-      <NavButton @click="closeMenu()" to="/contact" icon="paper-plane"
-        >Contact</NavButton
-      >
+      <NavButton @click="closeMenu()" to="/tech" icon="briefcase" name="Tech" />
+      <NavButton
+        @click="closeMenu()"
+        to="/projects"
+        icon="laptop-code"
+        name="Projects"
+      />
+      <NavButton @click="closeMenu()" to="/" icon="home" name="Home" />
+      <NavButton @click="closeMenu()" to="/blog" icon="pen-alt" name="Blog" />
+      <NavButton
+        @click="closeMenu()"
+        to="/contact"
+        icon="paper-plane"
+        name="Contact"
+      />
     </div>
   </div>
 </template>

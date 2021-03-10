@@ -1,7 +1,12 @@
 <template>
-  <nuxt-link class="navButton" :to="to" @click.native="$emit('click')">
+  <nuxt-link
+    :aria-label="name"
+    class="navButton"
+    :to="to"
+    @click.native="$emit('click')"
+  >
     <icon :icon="icon" :style="{ marginRight: '10px' }" />
-    <slot></slot>
+    {{ name }}
   </nuxt-link>
 </template>
 
@@ -12,6 +17,7 @@ export default Vue.extend({
     active: Boolean,
     to: String,
     icon: String,
+    name: String,
   },
 });
 </script>
