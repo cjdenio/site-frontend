@@ -14,6 +14,7 @@ import {
   faCodepen,
   faDev,
   faSpotify,
+  faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
@@ -25,6 +26,7 @@ library.add(
   faPaperPlane,
   faGithub,
   faCodepen,
+  faTwitter,
   faDev,
   faBars,
   faTimes,

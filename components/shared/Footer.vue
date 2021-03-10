@@ -3,13 +3,36 @@
     <CalebDenio fontSize="30px" style="flex-shrink: 0" />
     <Spotify />
     <div class="buttons">
-      <a href="https://github.com/cjdenio" target="_blank">
+      <a
+        href="https://github.com/cjdenio"
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+      >
         <icon :icon="['fab', 'github']" class="icon" fixed-width />
       </a>
-      <a href="https://codepen.io/cjdenio" target="_blank">
+      <a
+        href="https://codepen.io/cjdenio"
+        target="_blank"
+        rel="noopener"
+        aria-label="CodePen"
+      >
         <icon :icon="['fab', 'codepen']" class="icon" fixed-width />
       </a>
-      <a href="https://dev.to/cjdenio" target="_blank">
+      <a
+        href="https://twitter.com/CalebDenio"
+        target="_blank"
+        rel="noopener"
+        aria-label="Twitter"
+      >
+        <icon :icon="['fab', 'twitter']" class="icon" fixed-width />
+      </a>
+      <a
+        href="https://dev.to/cjdenio"
+        target="_blank"
+        rel="noopener"
+        aria-label="Dev.to"
+      >
         <icon :icon="['fab', 'dev']" class="icon" fixed-width />
       </a>
     </div>

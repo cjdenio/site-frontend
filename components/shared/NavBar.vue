@@ -10,6 +10,7 @@
       <Button
         @click="openMenu()"
         :style="{ padding: '10px', minWidth: 'unset' }"
+        aria-label="Open menu"
       >
         <icon icon="bars" size="2x" fixed-width />
       </Button>
