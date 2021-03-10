@@ -70,4 +70,12 @@ export default {
       'Josefin+Sans': [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
   },
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/uses',
+        redirect: '/tech',
+      });
+    },
+  },
 };
