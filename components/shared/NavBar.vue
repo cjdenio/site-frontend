@@ -71,12 +71,10 @@ export default Vue.extend({
 .menuOpener {
   justify-content: space-around;
   align-items: center;
-  padding-top: 50px;
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
+  right: 0; */
   width: 75%;
   max-width: 1000px;
   display: none;
@@ -84,13 +82,17 @@ export default Vue.extend({
   flex-wrap: wrap;
 }
 
-.navbar {
+.navbar,
+.menuOpener {
   padding-top: 50px;
-  position: absolute;
+  margin: 0 auto 50px auto;
+}
+
+.navbar {
+  /* position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  margin: 0 auto;
+  right: 0; */
   width: 75%;
   display: flex;
   justify-content: space-between;

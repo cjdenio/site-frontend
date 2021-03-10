@@ -1,13 +1,5 @@
 <template>
-  <div
-    :style="{
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: '100vh',
-    }"
-  >
+  <div class="page-centered">
     <h1 :style="{ fontSize: '60px' }" class="fourohfour">
       <span :class="{ green: outside }">4</span>
       <span :class="{ green: !outside }">0</span>

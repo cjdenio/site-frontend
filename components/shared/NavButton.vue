@@ -5,7 +5,7 @@
     :to="to"
     @click.native="$emit('click')"
   >
-    <icon :icon="icon" :style="{ marginRight: '10px' }" />
+    <!-- <icon :icon="icon" :style="{ marginRight: '10px' }" /> -->
     {{ name }}
   </nuxt-link>
 </template>
@@ -25,12 +25,12 @@ export default Vue.extend({
 <style scoped>
 .navButton {
   background: transparent;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   color: white;
   border: none;
   font-weight: bold;
-  font-size: 20px;
-  padding: 8px 20px;
+  font-size: 18px;
+  padding: 12px 20px;
   min-width: 150px;
   text-align: center;
   text-decoration: none;
@@ -54,6 +54,6 @@ export default Vue.extend({
 .navButton:not(.nuxt-link-exact-active):hover {
   background-color: #444444;
   transform: translateY(-2px);
-  box-shadow: 0px 4px 30px black;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
 }
 </style>

@@ -48,6 +48,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -63,5 +64,10 @@ export default {
   build: {},
   env: {
     BACKEND_URL: process.env.BACKEND_URL || 'http://localhost:1337',
+  },
+  googleFonts: {
+    families: {
+      'Josefin+Sans': [100, 200, 300, 400, 500, 600, 700, 800, 900],
+    },
   },
 };

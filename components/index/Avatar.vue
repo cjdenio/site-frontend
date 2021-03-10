@@ -19,12 +19,12 @@ export default Vue.extend({
     rotationY: '0deg',
   }),
   mounted() {
-    document.addEventListener('mousemove', this.mouseMoveListener);
-    document.addEventListener('mouseout', this.mouseLeaveListener);
+    // document.addEventListener('mousemove', this.mouseMoveListener);
+    // document.addEventListener('mouseout', this.mouseLeaveListener);
   },
   beforeDestroy() {
-    document.removeEventListener('mousemove', this.mouseMoveListener);
-    document.removeEventListener('mouseout', this.mouseLeaveListener);
+    // document.removeEventListener('mousemove', this.mouseMoveListener);
+    // document.removeEventListener('mouseout', this.mouseLeaveListener);
   },
   methods: {
     mouseMoveListener(e: MouseEvent) {

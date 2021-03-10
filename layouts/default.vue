@@ -30,7 +30,7 @@ export default Vue.extend({
 
 <style>
 html {
-  font-family: 'Poppins';
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -65,7 +65,7 @@ body {
 }
 
 .content {
-  padding-top: 150px;
+  /* padding-top: 150px; */
 }
 
 a {
@@ -73,5 +73,13 @@ a {
 }
 a:hover {
   color: var(--green);
+}
+
+.page-centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 250px);
 }
 </style>
