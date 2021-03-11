@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <Loading v-if="$apollo.loading" />
     <div class="projects">
       <project
         v-for="project in projects"
@@ -17,15 +18,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import axios from 'axios';
+import gql from 'graphql-tag';
 
 export default Vue.extend({
   data: () => ({
     projects: [],
   }),
-  async fetch() {
-    let resp = await axios.post(process.env.BACKEND_URL + '/graphql', {
-      query: `
+  apollo: {
+    projects: gql`
       {
         projects(sort: "name") {
           name
@@ -43,15 +43,7 @@ export default Vue.extend({
           }
         }
       }
-      `,
-    });
-    resp.data.data.projects.map((i: any) => {
-      if (i.logo) {
-        i.logo.url = process.env.BACKEND_URL + i.logo.url;
-      }
-    });
-    this.projects = resp.data.data.projects;
-    console.log(resp);
+    `,
   },
   head: {
     title: 'Projects | Caleb Denio',
