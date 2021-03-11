@@ -66,9 +66,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
-  env: {
-    BACKEND_URL: process.env.BACKEND_URL || 'http://localhost:1337',
-  },
   googleFonts: {
     families: {
       'Josefin+Sans': [100, 200, 300, 400, 500, 600, 700, 800, 900],
@@ -85,7 +82,8 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:1337/graphql',
+        httpEndpoint:
+          process.env.BACKEND_URL || 'http://localhost:1337/graphql',
       },
     },
   },

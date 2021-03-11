@@ -5,7 +5,7 @@
       class="green"
       size="3x"
       spin
-      v-if="loading"
+      v-if="$apollo.loading"
     />
     <div class="spotify" v-else>
       <icon
@@ -14,12 +14,12 @@
         size="2x"
         :style="{ marginRight: '10px' }"
       />
-      <div v-if="song != ''" style="text-align: left">
+      <div v-if="spotify.currentSong" style="text-align: left">
         Listening to
-        <a :href="url"
-          ><b>{{ song }}</b></a
+        <a :href="spotify.currentSong.url"
+          ><b>{{ spotify.currentSong.name }}</b></a
         >
-        by <b>{{ artist }}</b>
+        by <b>{{ spotify.currentSong.artists[0].name }}</b>
       </div>
       <div v-else style="text-align: left">
         I'm not listening to Spotify right now.
@@ -30,46 +30,30 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import axios from 'axios';
+
+import gql from 'graphql-tag';
 
 export default Vue.extend({
   data: () => ({
-    song: 'nothing',
-    url: '#',
-    artist: 'someone',
-    loading: true,
+    spotify: {},
   }),
-  async created() {
-    try {
-      let resp = await axios.post(process.env.BACKEND_URL + '/graphql', {
-        query: `
-      {
-        spotify {
-          currentSong {
-            name
-            url
-            artists {
+  apollo: {
+    spotify: {
+      query: gql`
+        {
+          spotify {
+            currentSong {
               name
+              url
+              artists {
+                name
+              }
             }
           }
         }
-      }
       `,
-      });
-
-      this.loading = false;
-
-      if (resp.data.data.spotify.currentSong) {
-        this.song = resp.data.data.spotify.currentSong.name;
-        this.url = resp.data.data.spotify.currentSong.url;
-        this.artist = resp.data.data.spotify.currentSong.artists[0].name;
-      } else {
-        this.song = '';
-      }
-    } catch (e) {
-      this.loading = false;
-      this.song = '';
-    }
+      pollInterval: 2000,
+    },
   },
 });
 </script>
