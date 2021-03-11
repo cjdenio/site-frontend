@@ -8,21 +8,22 @@
         <CalebDenio fontSize="40px" />
       </div>
       <Button
-        @click="openMenu()"
+        @click="toggleMenu()"
         :style="{ padding: '10px', minWidth: 'unset' }"
         aria-label="Open menu"
+        class="menuToggler"
       >
-        <icon icon="bars" size="2x" fixed-width />
+        <icon :icon="open ? 'times' : 'bars'" size="2x" fixed-width />
       </Button>
     </div>
     <div class="navbar" :class="{ open }">
-      <Button
+      <!-- <Button
         @click="closeMenu()"
         :style="{ padding: '10px', minWidth: 'unset' }"
         class="menuClose"
       >
         <icon icon="times" size="2x" fixed-width />
-      </Button>
+      </Button> -->
       <NavButton @click="closeMenu()" to="/tech" icon="briefcase" name="Tech" />
       <NavButton
         @click="closeMenu()"
@@ -55,6 +56,9 @@ export default Vue.extend({
     closeMenu() {
       this.open = false;
     },
+    toggleMenu() {
+      this.open = !this.open;
+    },
   },
 });
 </script>
@@ -68,13 +72,13 @@ export default Vue.extend({
   right: 30px;
 }
 
+.menuToggler {
+  z-index: 11;
+}
+
 .menuOpener {
   justify-content: space-around;
   align-items: center;
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; */
   width: 75%;
   max-width: 1000px;
   display: none;
@@ -89,10 +93,6 @@ export default Vue.extend({
 }
 
 .navbar {
-  /* position: absolute;
-  top: 0;
-  left: 0;
-  right: 0; */
   width: 75%;
   display: flex;
   justify-content: space-between;
@@ -133,11 +133,16 @@ export default Vue.extend({
     max-width: unset;
     width: 100%;
 
-    display: none;
+    transition-duration: 0.2s;
+    transition-property: opacity, visibility;
+
+    visibility: hidden;
+    opacity: 0;
   }
 
   .navbar.open {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
   }
 
   .navbar .navButton {
