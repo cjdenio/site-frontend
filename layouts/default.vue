@@ -82,4 +82,7 @@ a:hover {
   justify-content: center;
   height: calc(100vh - 250px);
 }
+.page {
+  min-height: calc(100vh - 250px);
+}
 </style>

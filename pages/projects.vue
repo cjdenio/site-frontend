@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div class="page">
     <Loading v-if="$apollo.loading" />
     <div class="projects">
       <project
