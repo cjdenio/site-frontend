@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { library, config } from '@fortawesome/fontawesome-svg-core';
 import {
   faHome,
   faBriefcase,
@@ -17,6 +17,8 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+config.autoAddCss = false;
 
 library.add(
   faHome,
