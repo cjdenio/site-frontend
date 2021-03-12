@@ -1,6 +1,9 @@
 <template>
   <div class="project">
-    <div class="image"></div>
+    <div
+      :class="{ image: true, empty: !image }"
+      :style="{ backgroundImage: image ? `url('${image}')` : '' }"
+    ></div>
     <div class="projectContent">
       <div class="header">
         <div class="name">{{ name }}</div>
@@ -40,6 +43,10 @@ export default Vue.extend({
     language: String,
     languageColor: String,
     tags: Array,
+    image: String,
+  },
+  created() {
+    console.log((<any>this).image);
   },
   computed: {
     renderedDescription() {
@@ -61,13 +68,16 @@ export default Vue.extend({
 .image {
   height: 250px;
   background-color: #151515;
+  background-size: cover;
+  background-position: center center;
+
   border-radius: 10px 10px 0 0;
   display: flex;
   place-items: center;
   justify-content: center;
   text-align: center;
 }
-.image::after {
+.image.empty::after {
   content: 'C';
   color: #252525;
   font-weight: bold;

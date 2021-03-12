@@ -11,6 +11,7 @@
         :language="project.language.name"
         :languageColor="project.language.color"
         :tags="project.tags.map((i) => i.name)"
+        :image="project.logo ? project.logo.url : null"
       />
     </div>
   </div>
