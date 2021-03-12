@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <div :style="{ marginRight: '50px' }">
+    <div class='avatar'>
       <Avatar />
     </div>
     <div class="info">
@@ -21,6 +21,10 @@
   align-items: center;
 }
 
+.avatar {
+  margin-right: 50px;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -29,5 +33,16 @@
 
 .info > * {
   margin: 10px 0;
+}
+
+
+@media screen and (max-width: 500px) {
+  .avatar {
+    margin-right: 0;
+  }
+
+  .welcome {
+   flex-direction: column;
+  }
 }
 </style>
