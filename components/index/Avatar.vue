@@ -49,5 +49,4 @@ export default Vue.extend({
 
   transition: transform 150ms;
 }
-
 </style>

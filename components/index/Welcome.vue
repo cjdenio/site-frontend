@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <div class='avatar'>
+    <div class="avatar">
       <Avatar />
     </div>
     <div class="info">
@@ -35,14 +35,13 @@
   margin: 10px 0;
 }
 
-
 @media screen and (max-width: 500px) {
   .avatar {
     margin-right: 0;
   }
 
   .welcome {
-   flex-direction: column;
+    flex-direction: column;
   }
 }
 </style>
