@@ -68,7 +68,8 @@ export default Vue.extend({
 .image {
   height: 250px;
   background-color: #151515;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
 
   border-radius: 10px 10px 0 0;
