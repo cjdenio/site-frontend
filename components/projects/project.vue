@@ -17,12 +17,7 @@
         </div>
         <a :href="url" target="_blank">
           <Button :style="{ minWidth: 'unset' }" title="View on GitHub">
-            <icon
-              :icon="['fab', 'github']"
-              :style="{
-                /*marginRight: '10px'*/
-              }"
-            />
+            <icon :icon="['fab', 'github']" />
             <!-- View on GitHub -->
           </Button>
         </a>

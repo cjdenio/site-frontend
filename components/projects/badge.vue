@@ -1,6 +1,9 @@
 <template>
-  <div class="badge" :style="{ color, borderColor: color }">
-    {{ text }}
+  <div class="badge">
+    <div class="badge-circle" :style="{ backgroundColor: color }"></div>
+    <div class="badge-text">
+      {{ text }}
+    </div>
   </div>
 </template>
 
@@ -16,9 +19,20 @@ export default Vue.extend({
 
 <style scoped>
 .badge {
-  border: 1px solid white;
-  padding: 3px 10px;
-  border-radius: 5px;
   font-size: 15px;
+
+  display: flex;
+  align-items: center;
+}
+
+.badge-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
