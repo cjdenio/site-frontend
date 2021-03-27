@@ -8,6 +8,7 @@ import {
   faPaperPlane,
   faBars,
   faTimes,
+  faLink,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
@@ -32,7 +33,8 @@ library.add(
   faDev,
   faBars,
   faTimes,
-  faSpotify
+  faSpotify,
+  faLink
 );
 
 Vue.component('icon', FontAwesomeIcon);

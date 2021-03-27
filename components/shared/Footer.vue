@@ -28,12 +28,12 @@
         <icon :icon="['fab', 'twitter']" class="icon" fixed-width />
       </a>
       <a
-        href="https://dev.to/cjdenio"
+        href="https://clb.li"
         target="_blank"
         rel="noopener"
-        aria-label="Dev.to"
+        aria-label="Links"
       >
-        <icon :icon="['fab', 'dev']" class="icon" fixed-width />
+        <icon :icon="['fa', 'link']" class="icon" fixed-width />
       </a>
     </div>
   </div>
