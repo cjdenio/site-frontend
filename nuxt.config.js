@@ -39,6 +39,12 @@ export default {
         body: true,
         async: true,
       },
+      {
+        src: 'https://site-analytics.host.calebdenio.me/umami.js',
+        async: true,
+        defer: true,
+        'data-website-id': '2d264786-962a-4654-8f1f-db54c834d912',
+      },
     ],
   },
 
