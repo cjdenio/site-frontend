@@ -52,6 +52,7 @@ export default {
   css: [
     '~/assets/css/main.css',
     '@fortawesome/fontawesome-svg-core/styles.css',
+    'highlight.js/styles/atom-one-dark.css',
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -82,6 +83,8 @@ export default {
   googleFonts: {
     families: {
       'Josefin+Sans': [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      Lato: [100, 200, 300, 400, 500, 600, 700, 800, 900],
+      'Fira+Code': [100, 200, 300, 400, 500, 600, 700, 800, 900],
     },
     display: 'swap',
   },

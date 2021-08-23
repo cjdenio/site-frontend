@@ -18,7 +18,6 @@
         <a :href="url" target="_blank">
           <Button :style="{ minWidth: 'unset' }" title="View on GitHub">
             <icon :icon="['fab', 'github']" />
-            <!-- View on GitHub -->
           </Button>
         </a>
       </div>
@@ -39,9 +38,6 @@ export default Vue.extend({
     languageColor: String,
     tags: Array,
     image: String,
-  },
-  created() {
-    console.log((<any>this).image);
   },
   computed: {
     renderedDescription() {
@@ -82,7 +78,7 @@ export default Vue.extend({
 }
 .projectContent {
   background-color: #424242;
-  padding: 10px 30px 20px 30px;
+  padding: 20px 30px 20px 30px;
 
   display: flex;
   flex-direction: column;
