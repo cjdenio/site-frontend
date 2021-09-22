@@ -3,7 +3,6 @@
     <img
       src="~assets/img/caleb.jpg"
       class="avatar"
-      :style="{ transform: `rotateX(${rotationX}) rotateY(${rotationY})` }"
       alt="Caleb Denio"
       width="250"
       height="250"
@@ -13,33 +12,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-export default Vue.extend({
-  data: () => ({
-    rotationX: '0deg',
-    rotationY: '0deg',
-  }),
-  mounted() {
-    // document.addEventListener('mousemove', this.mouseMoveListener);
-    // document.addEventListener('mouseout', this.mouseLeaveListener);
-  },
-  beforeDestroy() {
-    // document.removeEventListener('mousemove', this.mouseMoveListener);
-    // document.removeEventListener('mouseout', this.mouseLeaveListener);
-  },
-  methods: {
-    mouseMoveListener(e: MouseEvent) {
-      const x = e.clientX / window.innerWidth;
-      const y = e.clientY / window.innerHeight;
-
-      this.rotationY = -((x - 0.5) * 20) + 'deg';
-      this.rotationX = (y - 0.5) * 20 + 'deg';
-    },
-    mouseLeaveListener(e: MouseEvent) {
-      this.rotationX = '0deg';
-      this.rotationY = '0deg';
-    },
-  },
-});
+export default Vue.extend({});
 </script>
 
 <style scoped>
@@ -47,6 +20,12 @@ export default Vue.extend({
   width: 250px;
   border-radius: 40px;
 
-  transition: transform 150ms;
+  transition-property: transform, box-shadow;
+  transition-duration: 150ms;
+}
+
+.avatar:hover {
+  transform: scale(1.05) rotate(3deg);
+  box-shadow: 0px 0px 10px black;
 }
 </style>

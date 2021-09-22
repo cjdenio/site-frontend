@@ -50,6 +50,15 @@ body {
 
 body {
   background-color: #262626;
+  background-image: linear-gradient(
+    250deg,
+    #262626 33%,
+    #232323 33%,
+    #232323 66%,
+    #202020 66%,
+    #202020 100%
+  );
+  background-attachment: fixed;
   text-align: center;
 }
 

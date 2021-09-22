@@ -8,7 +8,7 @@
         <span class="green">Caleb</span> Denio
       </h1>
       <h3 :style="{ fontWeight: 'normal' }">
-        Software Developer · Graphic Designer
+        Developer · Designer · Musician(?)
       </h3>
       <!-- <HackClubWebring /> -->
     </div>
