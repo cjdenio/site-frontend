@@ -33,19 +33,6 @@ export default {
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [
-      {
-        src: 'https://code.tidio.co/gddlejvxb0ys39hipq00maugortt9rnf.js',
-        body: true,
-        async: true,
-      },
-      {
-        src: 'https://site-analytics.host.calebdenio.me/umami.js',
-        async: true,
-        defer: true,
-        'data-website-id': '2d264786-962a-4654-8f1f-db54c834d912',
-      },
-    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
